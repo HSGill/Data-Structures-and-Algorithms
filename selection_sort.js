@@ -12,6 +12,3 @@ for (let i = 0; i <= A.length - 1; i++) {
 }
 return A;
 }
-let arr =[3,5,6,2,1];
-var x = SelectionSort(arr);
-console.log(x);
