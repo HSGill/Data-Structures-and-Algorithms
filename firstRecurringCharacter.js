@@ -24,6 +24,7 @@ console.log(firstRecurringCharacter([2, 3, 5, 6, 4]));
 function firstRecurringCharacter2(input){
     let map = {};
     for (let i =0;i<input.length;i++){
+        console.log(map);
         if(map[input[i]] !==undefined){
             return input[i];
         }
