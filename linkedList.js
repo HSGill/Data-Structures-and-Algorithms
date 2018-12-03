@@ -52,18 +52,22 @@ class LinkedList {
     }
     insert(index,value){
         const newNode = new Node(value);
-        
-        const pre = this.head;
+        let pre = this.head;
         for (let i=0;i<index;i++){
             pre = pre.next;
         }
-         pre = newNode;
-         newNode.next = pre;
-      
-   }
+        const holdingPointer =pre.next ;
+         pre.next = newNode;
+         newNode.next = holdingPointer;
+         this.length++
+         return this.printList();
+ }
+   
     
 }
 
 const myLinkedList = new LinkedList(10);
 myLinkedList.append(5);
+myLinkedList.insert(1,23);
 
+console.log(myLinkedList);
