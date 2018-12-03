@@ -53,7 +53,7 @@ class LinkedList {
     insert(index,value){
         const newNode = new Node(value);
         let pre = this.head;
-        for (let i=0;i<index;i++){
+        for (let i=0;i<index-1;i++){
             pre = pre.next;
         }
         const holdingPointer =pre.next ;
@@ -62,6 +62,17 @@ class LinkedList {
          this.length++
          return this.printList();
  }
+
+ remove(index){
+     let currentNode = this.head;
+          for (let i=0;i<index-1;i++){
+              currentNode= currentNode.next;
+          }
+          const unwantedNode = currentNode.next;
+          currentNode.next = unwantedNode.next;
+          this.length--;
+          return this.printList();
+}
    
     
 }
@@ -69,5 +80,3 @@ class LinkedList {
 const myLinkedList = new LinkedList(10);
 myLinkedList.append(5);
 myLinkedList.insert(1,23);
-
-console.log(myLinkedList);
