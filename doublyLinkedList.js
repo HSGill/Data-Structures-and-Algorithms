@@ -27,7 +27,7 @@ class DoublyLinkedList {
     }
     prepend(value) {
         const newNode = new Node(value);
-        newNode.previous = this.tail;
+        this.head.previous =newNode;
         newNode.next = this.head;
         this.head = newNode;
         this.length++;
@@ -48,9 +48,11 @@ class DoublyLinkedList {
         for (let i=0;i<index-1;i++){
             pre = pre.next;
         }
-        const holdingPointer =pre.next ;
+        const follower =pre.next ;
          pre.next = newNode;
-         newNode.next = holdingPointer;
+         newNode.next = follower;
+         newNode.previous = pre;
+         follower.previous = newNode;
          this.length++
          return this.printList();
  }
