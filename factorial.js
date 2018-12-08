@@ -10,8 +10,6 @@
         return number*findFactorialRecursive(number-1);
     }
 findFactorialRecursive(5);
-
-
 function findFactorialIterative(number) {
     let counter = number - 1
     while (counter > 0) {
