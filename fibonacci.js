@@ -5,19 +5,25 @@
 
 //For example: fibonacciRecursive(6) should return 8
 
-function fibonacciIterative(n){
+function fibonacciIterative(n) {
     //code here;
-    let array = [0,1]
-    for(let i=0;i<n;i++){
-        array.push(array[i]+array[i-1]);
-    }
-    return array[i];
+    let array = [0, 1]
+    for (let i = 2; i <= n; i++) {
+        array.push(array[i - 2] + array[i - 1]);
 
-  }
-  fibonacciIterative(3);
-  
-  function fibonacciRecursive(n) {
-    //code here;
-  }
-  
-  fibonacciRecursive(3)
+    }
+    return array[n];
+
+}
+fibonacciIterative(3);
+
+function fibonacciRecursive(n) {
+    if (n < 2) {
+        return n;
+
+    }
+    return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2)
+
+}
+
+fibonacciRecursive(3)
