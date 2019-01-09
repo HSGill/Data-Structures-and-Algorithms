@@ -9,8 +9,8 @@ function mergeSort(array) {
     const left = array.slice(0, mid);
     const right = array.slice(mid);
     // Split Array in into right and left
-  //  console.log(leftArray);
-   // console.log(rightArray);
+ console.log(left);
+ console.log(right);
     return merge(
         mergeSort(left),
         mergeSort(right)
@@ -32,6 +32,7 @@ function merge(left, right) {
             rightIndex = rightIndex + 1;
         }
     }
+    console.log(left,right);
     return result.concat(left.slice(leftIndex))
     .concat(right.slice(rightIndex));
 }
