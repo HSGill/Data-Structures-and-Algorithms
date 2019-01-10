@@ -162,6 +162,18 @@ class Node {
         }
         return this.breadthFirstSearchR(queue,list);
     }
+    DFSInorder(){
+        return traverseInOrder(this.root, []);
+    }
+    DFSPostorder(){
+      return traversePosrOrder(this.root, []);
+
+    }
+    DFSPreorder(){
+      return traversePreOrder(this.root, []);
+    }
+    }
+    function traverseInOrder(node,list){
   }
   
   const tree = new BinarySearchTree();
