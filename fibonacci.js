@@ -26,4 +26,4 @@ function fibonacciRecursive(n) {
 
 }
 
-fibonacciRecursive(3)
+fibonacciRecursive(3);
