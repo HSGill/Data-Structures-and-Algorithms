@@ -11,7 +11,7 @@
     }
 findFactorialRecursive(5);
 function findFactorialIterative(number) {
-    let counter = number - 1
+    let counter = number - 1;
     while (counter > 0) {
         number *= counter;
         counter--;
