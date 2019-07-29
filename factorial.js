@@ -7,7 +7,7 @@
           return 2;
       }
 
-        return number*findFactorialRecursive(number-1);
+        return findFactorialRecursive(number) * findFactorialRecursive(number-1);
     }
 findFactorialRecursive(5);
 function findFactorialIterative(number) {
