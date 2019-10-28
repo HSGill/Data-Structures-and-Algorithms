@@ -185,7 +185,7 @@ class Node {
   tree.insert(15)
   tree.insert(1)
   tree.remove(170)
-  tree.breadthFirstSearch();
+  console.log(tree.breadthFirstSearch());
   tree.breadthFirstSearchR([tree.root], []);
 
   JSON.stringify(traverse(tree.root))
